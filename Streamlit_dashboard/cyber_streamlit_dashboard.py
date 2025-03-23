@@ -97,17 +97,8 @@ elif page == "🏆 Analyse des auteurs":
 
 elif page == "🔍 Analyse des mots-clés":
     st.header("🔍 Analyse des mots-clés")
-    st.subheader("Tableau des données : top_10_authors_df_sorted.csv")
+    st.subheader("Tableau des données : Top_10_authors.csv")
     st.dataframe(top_10_authors_df_sorted)
-
-    st.subheader("WordCloud des mots-clés")
-    text = " ".join(top_10_authors_df_sorted['Keywords'].dropna().astype(str))
-    wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
-    fig, ax = plt.subplots(figsize=(10, 5))
-    ax.imshow(wordcloud, interpolation='bilinear')
-    ax.axis("off")
-    plt.title("Nuage de mots des mots-clés")
-    st.pyplot(fig)
 
     st.subheader("📚 Top 10 des auteurs par mots-clés")
     author_keyword_counts = df.groupby(['Author', 'Keywords'])['Author'].count().unstack().fillna(0)
@@ -122,6 +113,15 @@ elif page == "🔍 Analyse des mots-clés":
     plt.xticks(rotation=45, ha='right')
     plt.legend(title='Mots-clés', bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.tight_layout()
+    st.pyplot(fig)
+
+    st.subheader("WordCloud des mots-clés")
+    text = " ".join(top_10_authors_df_sorted['Keywords'].dropna().astype(str))
+    wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.imshow(wordcloud, interpolation='bilinear')
+    ax.axis("off")
+    plt.title("Nuage de mots des mots-clés")
     st.pyplot(fig)
 
     st.subheader("WordCloud du contenu des publications")
