@@ -52,10 +52,6 @@ if page == "📈 Statistiques générales":
         st.markdown(f"<div style='background-color:#d9f7be; padding:10px; border-radius:10px; text-align:center;'><b>Nombre d'auteurs uniques</b><br><span style='font-size:20px; color:#5cb85c;'>{df['Author'].nunique()}</span></div>", unsafe_allow_html=True)
 
     with col3:
-        top_10_authors_count = df['Author'].value_counts().head(10).count()
-        st.markdown(f"<div style='background-color:#f6d9d9; padding:10px; border-radius:10px; text-align:center;'><b>Top 10 des auteurs</b><br><span style='font-size:20px; color:#f0ad4e;'>{top_10_authors_count}</span></div>", unsafe_allow_html=True)
-
-    with col4:
         unique_keywords_count = df['Keywords'].dropna().nunique()  # Assurez-vous d'ignorer les NaN
         st.markdown(f"<div style='background-color:#e9f7ff; padding:10px; border-radius:10px; text-align:center;'><b>Nombre de mots-clés uniques</b><br><span style='font-size:20px; color:#5bc0de;'>{unique_keywords_count}</span></div>", unsafe_allow_html=True)
 
