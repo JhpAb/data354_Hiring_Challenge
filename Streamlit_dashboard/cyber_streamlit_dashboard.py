@@ -41,10 +41,6 @@ page = st.sidebar.radio("Aller à", [
 # ================================
 if page == "📈 Statistiques générales":
     st.header("📊 Statistiques générales")
-    
-    # 🔍 Affichage du DataFrame principal
-    st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
-    st.dataframe(df)
 
     # 🧮 Affichage des métriques clés sur la même ligne dans des cases
     col1, col2, col3, col4 = st.columns(4)
@@ -65,8 +61,11 @@ if page == "📈 Statistiques générales":
         unique_keywords_count = df['Keywords'].nunique()
         st.metric(label="Nombre de mots-clés uniques", value=unique_keywords_count)
 
+    # 🔍 Affichage du DataFrame principal
+    st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
+    st.dataframe(df)
 
-    # 📊 Top 30 auteurs avec le plus de publications
+    # 📊 Les 30 auteurs avec le plus de publications
     st.subheader("Nombre de publications par auteur")
     author_counts = df['Author'].value_counts().head(30)
     fig, ax = plt.subplots(figsize=(12, 6))
@@ -74,7 +73,7 @@ if page == "📈 Statistiques générales":
     plt.xticks(rotation=90)
     plt.xlabel("Auteurs")
     plt.ylabel("Nombre de publications")
-    plt.title("Top 30 des auteurs par nombre de publications")
+    plt.title("Les 30 des auteurs par nombre de publications")
     st.pyplot(fig)
 
 # ============================
