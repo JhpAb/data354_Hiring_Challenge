@@ -46,9 +46,25 @@ if page == "📈 Statistiques générales":
     st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
     st.dataframe(df)
 
-    # 🧮 Affichage des métriques clés
+    # 🧮 Affichage des métriques clés sur la même ligne dans des cases
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
     st.metric(label="Total des publications", value=len(df))
+
+with col2:
     st.metric(label="Nombre d'auteurs uniques", value=df['Author'].nunique())
+
+with col3:
+    # Top 10 des auteurs
+    top_10_authors_count = df['Author'].value_counts().head(10).count()
+    st.metric(label="Top 10 des auteurs", value=top_10_authors_count)
+
+with col4:
+    # Nombre de mots-clés uniques
+    unique_keywords_count = df['Keywords'].nunique()
+    st.metric(label="Nombre de mots-clés uniques", value=unique_keywords_count)
+
 
     # 📊 Top 30 auteurs avec le plus de publications
     st.subheader("Nombre de publications par auteur")
