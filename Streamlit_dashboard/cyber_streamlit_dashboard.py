@@ -122,7 +122,7 @@ elif page == "🔍 Analyse des mots-clés":
     st.pyplot(fig)
 
 elif page == "📋 Analyse du contenu de publications":
-    st.header("🔍 Analyse du contenu de publications")
+    st.header("📋 Analyse du contenu de publications")
     st.subheader("Tableau des données : Top_10_authors.csv")
     st.dataframe(top_10_authors_df_sorted)
 
