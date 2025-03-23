@@ -138,7 +138,7 @@ elif page == "🏆 Analyse des auteurs":
     plt.title("Top 10 des auteurs et/ou sources avec le plus de publications")
     st.pyplot(fig)
     
-    # 📊 Likes et Shares des Top 10 Auteurs N.B : Les données de 'Likes' et de 'Shares' ont été générées de manière arbitraire, car nous ne pouvions pas les collecter
+    # 📊 Likes et Shares des Top 10 Auteurs
     
     st.subheader("Likes et Shares des Top 10 Auteurs")
     col1, col2 = st.columns(2)
@@ -165,6 +165,10 @@ elif page == "🏆 Analyse des auteurs":
         # 📝 Explication sous le graphique
         st.write("Ce graphique illustre le nombre de 'Shares' (partages) des publications du Top 10 des auteurs." 
         " Cela permet d'évaluer la viralité des publications et de voir comment elles sont partagées au sein du réseau LinkedIn.")
+        # Créer un conteneur pour le texte
+    with st.container():
+        st.markdown("**N.B : Les données de 'Likes' et de 'Shares' ont été générées de manière arbitraire, car nous ne pouvions pas les collecter.**")
+
 
     # 🔗 Corrélation entre Likes et Shares
     st.subheader("📊 Corrélation entre Likes et Shares")
