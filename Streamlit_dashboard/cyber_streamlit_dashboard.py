@@ -46,7 +46,7 @@ if page == "📈 Statistiques générales":
     st.dataframe(df)
 
     # 🧮 Affichage des métriques clés dans des cases colorées
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
 
     with col1:
         st.markdown(f"<div style='background-color:#dbe9d7; padding:10px; border-radius:10px; text-align:center;'><b>Total des publications</b><br><span style='font-size:20px; color:#1a8d5e;'>{len(df)}</span></div>", unsafe_allow_html=True)
