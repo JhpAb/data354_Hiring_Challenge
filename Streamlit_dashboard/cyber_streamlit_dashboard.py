@@ -138,6 +138,9 @@ elif page == "🏆 Analyse des auteurs":
     correlation = top_10_authors_df_sorted['Likes'].corr(top_10_authors_df_sorted['Shares'])
     st.write(f"Coefficient de corrélation : **{correlation:.2f}**")
 
+    
+    
+    
     st.write("N.B : Les donées de 'Likes' 'Shares' on été générées de manière arbitraires vu que nous ne pouvions les colleceter.")
 
 
