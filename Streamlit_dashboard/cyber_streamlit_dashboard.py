@@ -64,7 +64,7 @@ if page == "📈 Statistiques générales":
     st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
     st.dataframe(df)
 
-    # 📊 Les 30 auteurs avec le plus de publications
+    # 📊 Les 30 auteurs et ou sources avec le plus de publications
     st.subheader("Nombre de publications par auteur")
     author_counts = df['Author'].value_counts().head(30)
     fig, ax = plt.subplots(figsize=(12, 6))
@@ -72,7 +72,7 @@ if page == "📈 Statistiques générales":
     plt.xticks(rotation=90)
     plt.xlabel("Auteurs")
     plt.ylabel("Nombre de publications")
-    plt.title("Les 30 des auteurs par nombre de publications")
+    plt.title("Les 30 auteurs et ou sources par avec le plus de publications")
     st.pyplot(fig)
 
 # ============================
@@ -92,7 +92,7 @@ elif page == "🏆 Analyse des auteurs":
     sns.barplot(x=author_counts.values, y=author_counts.index, color="red", ax=ax)
     plt.xlabel("Nombre de publications")
     plt.ylabel("Auteurs")
-    plt.title("Top 10 des auteurs avec le plus de publications")
+    plt.title("Top 10 des auteurs et ou sources avec le plus de publications")
     st.pyplot(fig)
 
     # 📊 Likes et Shares des Top 10 Auteurs (2 colonnes côte à côte)
