@@ -138,8 +138,7 @@ elif page == "🏆 Analyse des auteurs":
     plt.title("Top 10 des auteurs et/ou sources avec le plus de publications")
     st.pyplot(fig)
     
-    # 📊 Likes et Shares des Top 10 Auteurs (2 colonnes côte à côte)
-    # N.B : Les données de 'Likes' et de 'Shares' ont été générées de manière arbitraire, car nous ne pouvions pas les collecter
+    # 📊 Likes et Shares des Top 10 Auteurs N.B : Les données de 'Likes' et de 'Shares' ont été générées de manière arbitraire, car nous ne pouvions pas les collecter
     
     st.subheader("Likes et Shares des Top 10 Auteurs")
     col1, col2 = st.columns(2)
