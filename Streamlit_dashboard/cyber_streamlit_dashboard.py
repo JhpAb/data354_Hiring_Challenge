@@ -125,7 +125,7 @@ elif page == "🏆 Analyse des auteurs":
         st.pyplot(fig)
         # 📝 Explication sous le graphique
         st.write("Ce graphique illustre le nombre de 'Shares' (partages) des publications des Top 10 Auteurs." 
-        "Cela permet d'évaluer la viralité des publications et de voir comment elles sont partagées au sein du réseau LinkedIn.")
+        " Cela permet d'évaluer la viralité des publications et de voir comment elles sont partagées au sein du réseau LinkedIn.")
 
     # 🔗 Corrélation entre Likes et Shares
     st.subheader("📊 Corrélation entre Likes et Shares")
@@ -137,6 +137,9 @@ elif page == "🏆 Analyse des auteurs":
     st.pyplot(fig)
     correlation = top_10_authors_df_sorted['Likes'].corr(top_10_authors_df_sorted['Shares'])
     st.write(f"Coefficient de corrélation : **{correlation:.2f}**")
+
+   st.write("Les donées de 'Likes' 'Shares' on été générées de manière arbitraires vu que nous ne pouvions les colleceter.")
+
 
 # ============================
 # 3️⃣ Page : Analyse des mots-clés
