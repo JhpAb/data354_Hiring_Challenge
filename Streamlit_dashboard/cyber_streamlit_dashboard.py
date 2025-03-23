@@ -115,7 +115,7 @@ if page == "📈 Statistiques générales":
     # 🔍 Affichage du DataFrame principal
     st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
     st.dataframe(df)
-    st.write("Nous avons obtenu ce tableau après avoir scrapper des posts LinkedIn." 
+    st.write("Nous avons obtenu ce tableau après avoir scrappé des posts LinkedIn." 
               " Vous trouverez plus d'expliacations détaillées dans ce ppt https://bit.ly/4bWrnEX.")
 
 # ============================
