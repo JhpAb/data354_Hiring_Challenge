@@ -94,20 +94,6 @@ elif page == "🏆 Analyse des auteurs":
     correlation = top_10_authors_df_sorted['Likes'].corr(top_10_authors_df_sorted['Shares'])
     st.write(f"Coefficient de corrélation : **{correlation:.2f}**")
 
-    st.subheader("📚 Top 10 des auteurs par mots-clés")
-    author_keyword_counts = df.groupby(['Author', 'Keywords'])['Author'].count().unstack().fillna(0)
-    top_10_authors = author_keyword_counts.sum(axis=1).sort_values(ascending=False).head(10).index
-    top_author_keyword_counts = author_keyword_counts.loc[top_10_authors]
-
-    fig, ax = plt.subplots(figsize=(15, 8))
-    top_author_keyword_counts.plot(kind='bar', stacked=True, ax=ax)
-    plt.title('Top 10 des Auteurs Uniques par Mot-clés')
-    plt.xlabel('Auteurs')
-    plt.ylabel('Nombre de Publications')
-    plt.xticks(rotation=45, ha='right')
-    plt.legend(title='Mots-clés', bbox_to_anchor=(1.05, 1), loc='upper left')
-    plt.tight_layout()
-    st.pyplot(fig)
 
 elif page == "🔍 Analyse des mots-clés":
     st.header("🔍 Analyse des mots-clés")
@@ -121,6 +107,21 @@ elif page == "🔍 Analyse des mots-clés":
     ax.imshow(wordcloud, interpolation='bilinear')
     ax.axis("off")
     plt.title("Nuage de mots des mots-clés")
+    st.pyplot(fig)
+
+    st.subheader("📚 Top 10 des auteurs par mots-clés")
+    author_keyword_counts = df.groupby(['Author', 'Keywords'])['Author'].count().unstack().fillna(0)
+    top_10_authors = author_keyword_counts.sum(axis=1).sort_values(ascending=False).head(10).index
+    top_author_keyword_counts = author_keyword_counts.loc[top_10_authors]
+
+    fig, ax = plt.subplots(figsize=(15, 8))
+    top_author_keyword_counts.plot(kind='bar', stacked=True, ax=ax)
+    plt.title('Top 10 des Auteurs Uniques par Mot-clés')
+    plt.xlabel('Auteurs')
+    plt.ylabel('Nombre de Publications')
+    plt.xticks(rotation=45, ha='right')
+    plt.legend(title='Mots-clés', bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.tight_layout()
     st.pyplot(fig)
 
     st.subheader("WordCloud du contenu des publications")
