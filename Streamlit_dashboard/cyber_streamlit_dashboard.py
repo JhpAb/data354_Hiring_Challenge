@@ -50,7 +50,7 @@ if page == "📈 Statistiques générales":
 
 elif page == "🏆 Analyse des auteurs":
     st.header("🏆 Top 10 Auteurs")
-    st.subheader("Tableau des données : top_10_authors.csv")
+    st.subheader("Tableau des données : Top_10_authors.csv")
     st.dataframe(top_10_authors_df_sorted)
 
     st.subheader("Auteurs avec le plus de publications")
