@@ -55,7 +55,7 @@ if page == "📈 Statistiques générales":
     # Comptage du nombre de lignes dans le fichier Top_10_authors.csv
     top_10_authors_count = len(top_10_authors_df_sorted)
     st.markdown(f"<div style='background-color:#f6d9d9; padding:10px; border-radius:10px; text-align:center;'><b>Nombres de publications du Top 10 des auteurs</b><br><span style='font-size:20px; color:#f0ad4e;'>{top_10_authors_count}</span></div>", unsafe_allow_html=True)
-    
+
     with col4:
         unique_keywords_count = df['Keywords'].dropna().nunique()  # Assurez-vous d'ignorer les NaN
         st.markdown(f"<div style='background-color:#e9f7ff; padding:10px; border-radius:10px; text-align:center;'><b>Nombre de mots-clés uniques</b><br><span style='font-size:20px; color:#5bc0de;'>{unique_keywords_count}</span></div>", unsafe_allow_html=True)
