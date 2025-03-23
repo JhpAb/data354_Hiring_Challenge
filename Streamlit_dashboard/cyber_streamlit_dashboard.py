@@ -41,76 +41,76 @@ page = st.sidebar.radio("Aller à", [
 # ================================
 if page == "📈 Statistiques générales":
     st.header("📊 Statistiques générales")
-# 🧮 Affichage des métriques clés dans des cases colorées avec effet hover
-col1, col2, col3, col4 = st.columns(4)
+    # 🧮 Affichage des métriques clés dans des cases colorées avec effet hover
+    col1, col2, col3, col4 = st.columns(4)
 
-# Insertion de CSS dans la page (une seule fois)
-st.markdown("""
-    <style>
-    .metric-card {
-        padding: 20px;
-        border-radius: 12px;
-        min-height: 140px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    # Insertion de CSS dans la page (une seule fois)
+    st.markdown("""
+        <style>
+        .metric-card {
+            padding: 20px;
+            border-radius: 12px;
+            min-height: 140px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .metric-card:hover {
-        transform: scale(1.03);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+        .metric-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-    .metric-title {
-        font-size: 16px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 5px;
-    }
+        .metric-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
 
-    .metric-value {
-        font-size: 24px;
-        font-weight: bold;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
-# 🔢 Cartes avec fond coloré et hover
-with col1:
-    st.markdown(f"""
-        <div class="metric-card" style="background-color:#dbe9d7;">
-            <div class="metric-title">Total des publications</div>
-            <div class="metric-value" style="color:#1a8d5e;">{len(df)}</div>
-        </div>
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        </style>
     """, unsafe_allow_html=True)
 
-with col2:
-    st.markdown(f"""
-        <div class="metric-card" style="background-color:#d9f7be;">
-            <div class="metric-title">Auteurs uniques</div>
-            <div class="metric-value" style="color:#5cb85c;">{df['Author'].nunique()}</div>
-        </div>
-    """, unsafe_allow_html=True)
+    # 🔢 Cartes avec fond coloré et hover
+    with col1:
+        st.markdown(f"""
+            <div class="metric-card" style="background-color:#dbe9d7;">
+                <div class="metric-title">Total des publications</div>
+                <div class="metric-value" style="color:#1a8d5e;">{len(df)}</div>
+            </div>
+        """, unsafe_allow_html=True)
 
-with col3:
-    top_10_authors_count = len(top_10_authors_df_sorted)
-    st.markdown(f"""
-        <div class="metric-card" style="background-color:#f6d9d9;">
-            <div class="metric-title">Publications du Top 10 des auteurs</div>
-            <div class="metric-value" style="color:#f0ad4e;">{top_10_authors_count}</div>
-        </div>
-    """, unsafe_allow_html=True)
+    with col2:
+        st.markdown(f"""
+            <div class="metric-card" style="background-color:#d9f7be;">
+                <div class="metric-title">Auteurs uniques</div>
+                <div class="metric-value" style="color:#5cb85c;">{df['Author'].nunique()}</div>
+            </div>
+        """, unsafe_allow_html=True)
 
-with col4:
-    unique_keywords_count = df['Keywords'].dropna().nunique()
-    st.markdown(f"""
-        <div class="metric-card" style="background-color:#e9f7ff;">
-            <div class="metric-title">Mots-clés uniques</div>
-            <div class="metric-value" style="color:#5bc0de;">{unique_keywords_count}</div>
-        </div>
-    """, unsafe_allow_html=True)
+    with col3:
+        top_10_authors_count = len(top_10_authors_df_sorted)
+        st.markdown(f"""
+            <div class="metric-card" style="background-color:#f6d9d9;">
+                <div class="metric-title">Publications du Top 10 des auteurs</div>
+                <div class="metric-value" style="color:#f0ad4e;">{top_10_authors_count}</div>
+            </div>
+        """, unsafe_allow_html=True)
+
+    with col4:
+        unique_keywords_count = df['Keywords'].dropna().nunique()
+        st.markdown(f"""
+            <div class="metric-card" style="background-color:#e9f7ff;">
+                <div class="metric-title">Mots-clés uniques</div>
+                <div class="metric-value" style="color:#5bc0de;">{unique_keywords_count}</div>
+            </div>
+        """, unsafe_allow_html=True)
 
     # 🔍 Affichage du DataFrame principal
     st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
