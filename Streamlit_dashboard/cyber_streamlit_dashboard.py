@@ -46,7 +46,7 @@ if page == "📈 Statistiques générales":
     st.dataframe(df)
 
     # 🧮 Affichage des métriques clés dans des cases colorées
-    col1, col2, col3, col4, col5, col6 = st.columns(6)
+    col1, col2, col3, col4= st.columns(4)
 
     with col1:
         st.markdown(f"<div style='background-color:#dbe9d7; padding:10px; border-radius:10px; text-align:center;'><b>Total des publications</b><br><span style='font-size:20px; color:#1a8d5e;'>{len(df)}</span></div>", unsafe_allow_html=True)
@@ -61,12 +61,6 @@ if page == "📈 Statistiques générales":
     with col4:
         unique_keywords_count = df['Keywords'].dropna().nunique()  # Assurez-vous d'ignorer les NaN
         st.markdown(f"<div style='background-color:#e9f7ff; padding:10px; border-radius:10px; text-align:center;'><b>Nombre de mots-clés uniques</b><br><span style='font-size:20px; color:#5bc0de;'>{unique_keywords_count}</span></div>", unsafe_allow_html=True)
-
-    with col5:
-        st.markdown(f"<div style='background-color:#f1e0ff; padding:10px; border-radius:10px; text-align:center;'><b>Total des Likes</b><br><span style='font-size:20px; color:#9b59b6;'>{total_likes}</span></div>", unsafe_allow_html=True)
-
-    with col6:
-        st.markdown(f"<div style='background-color:#e0f7fa; padding:10px; border-radius:10px; text-align:center;'><b>Total des Shares</b><br><span style='font-size:20px; color:#00bcd4;'>{total_shares}</span></div>", unsafe_allow_html=True)
 # ============================
 # 2️⃣ Page : Analyse des auteurs
 # ============================
