@@ -32,7 +32,7 @@ page = st.sidebar.radio("Aller à", ["📈 Statistiques générales", "🏆 Anal
 if page == "📈 Statistiques générales":
     st.header("📊 Statistiques générales")
 
-    st.subheader("Tableau des données : cyber_security_ai_tools.csv")
+    st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
     st.dataframe(df)
 
     st.metric(label="Total des publications", value=len(df))
@@ -50,7 +50,7 @@ if page == "📈 Statistiques générales":
 
 elif page == "🏆 Analyse des auteurs":
     st.header("🏆 Top 10 Auteurs")
-    st.subheader("Tableau des données : top_10_authors_df_sorted.csv")
+    st.subheader("Tableau des données : top_10_authors.csv")
     st.dataframe(top_10_authors_df_sorted)
 
     st.subheader("Auteurs avec le plus de publications")
