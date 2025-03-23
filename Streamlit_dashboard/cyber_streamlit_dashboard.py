@@ -14,7 +14,7 @@ try:
     df = pd.read_csv(url1)  # Tableau des publications
 except Exception as e:
     st.error(f"Erreur lors du chargement du fichier CSV principal: {e}")
-    df = pd.DataFrame()  # Create empty dataframe to prevent errors
+    df = pd.DataFrame()
 
 try:
     top_10_authors_df_sorted = pd.read_csv(url2)  # Tableau des auteurs
@@ -69,7 +69,6 @@ elif page == "🏆 Analyse des auteurs":
     with col1:
         fig, ax = plt.subplots(figsize=(12, 6))
         sns.barplot(x='Likes', y='Author', data=top_10_authors_df_sorted, palette='viridis', ax=ax)
-        plt.xticks(rotation=0)
         plt.xlabel("Likes")
         plt.ylabel("Auteurs")
         plt.title("Likes des Top 10 Auteurs")
@@ -78,7 +77,6 @@ elif page == "🏆 Analyse des auteurs":
     with col2:
         fig, ax = plt.subplots(figsize=(12, 6))
         sns.barplot(x='Shares', y='Author', data=top_10_authors_df_sorted, palette='magma', ax=ax)
-        plt.xticks(rotation=45)
         plt.xlabel("Shares")
         plt.ylabel("Auteurs")
         plt.title("Shares des Top 10 Auteurs")
@@ -93,7 +91,6 @@ elif page == "🏆 Analyse des auteurs":
     st.pyplot(fig)
     correlation = top_10_authors_df_sorted['Likes'].corr(top_10_authors_df_sorted['Shares'])
     st.write(f"Coefficient de corrélation : **{correlation:.2f}**")
-
 
 elif page == "🔍 Analyse des mots-clés":
     st.header("🔍 Analyse des mots-clés")
@@ -124,7 +121,7 @@ elif page == "🔍 Analyse des mots-clés":
     plt.title("Nuage de mots des mots-clés")
     st.pyplot(fig)
 
-    elif page == "📋 Analyse du contenu de publications":
+elif page == "📋 Analyse du contenu de publications":
     st.header("🔍 Analyse du contenu de publications")
     st.subheader("Tableau des données : Top_10_authors.csv")
     st.dataframe(top_10_authors_df_sorted)
@@ -138,7 +135,7 @@ elif page == "🔍 Analyse des mots-clés":
     plt.title("Nuage de mots du contenu des publications")
     st.pyplot(fig)
 
-# 👇 Footer avec les infos de l’auteur
+# 👇 Footer
 st.sidebar.markdown("---")
 st.sidebar.markdown("📌 **Auteur : ABBE Jean Pierre, Data Analyst | CEM Engineer**")
 st.sidebar.markdown("📞 **Téléphone :** +225 0749499034")
