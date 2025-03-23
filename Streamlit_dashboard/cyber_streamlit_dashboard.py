@@ -42,19 +42,23 @@ page = st.sidebar.radio("Aller à", [
 if page == "📈 Statistiques générales":
     st.header("📊 Statistiques générales")
 
-    # 🧮 Affichage des métriques clés sur la même ligne dans des cases
-    col1, col2, col3, col4 = st.columns(4)
+# 🧮 Affichage des métriques clés dans des cases colorées
+col1, col2, col3, col4 = st.columns(4)
 
-    with col1:
-        st.metric(label="Total des publications", value=len(df))
+with col1:
+    st.markdown(f"<div style='background-color:#dbe9d7; padding:10px; border-radius:10px; text-align:center;'><b>Total des publications</b><br><span style='font-size:20px; color:#1a8d5e;'>{len(df)}</span></div>", unsafe_allow_html=True)
 
-    with col2:
-        st.metric(label="Nombre d'auteurs uniques", value=df['Author'].nunique())
+with col2:
+    st.markdown(f"<div style='background-color:#d9f7be; padding:10px; border-radius:10px; text-align:center;'><b>Nombre d'auteurs uniques</b><br><span style='font-size:20px; color:#5cb85c;'>{df['Author'].nunique()}</span></div>", unsafe_allow_html=True)
 
-    with col3:
-        # Nombre de mots-clés uniques
-        unique_keywords_count = df['Keywords'].nunique()
-        st.metric(label="Mots-clés uniques", value=unique_keywords_count)
+with col3:
+    top_10_authors_count = df['Author'].value_counts().head(10).count()
+    st.markdown(f"<div style='background-color:#f6d9d9; padding:10px; border-radius:10px; text-align:center;'><b>Top 10 des auteurs</b><br><span style='font-size:20px; color:#f0ad4e;'>{top_10_authors_count}</span></div>", unsafe_allow_html=True)
+
+with col4:
+    unique_keywords_count = df['Keywords'].nunique()
+    st.markdown(f"<div style='background-color:#e9f7ff; padding:10px; border-radius:10px; text-align:center;'><b>Nombre de mots-clés uniques</b><br><span style='font-size:20px; color:#5bc0de;'>{unique_keywords_count}</span></div>", unsafe_allow_html=True)
+
 
     # 🔍 Affichage du DataFrame principal
     st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
