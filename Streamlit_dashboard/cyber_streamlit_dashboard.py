@@ -59,9 +59,9 @@ if page == "📈 Statistiques générales":
         unique_keywords_count = df['Keywords'].dropna().nunique()  # Assurez-vous d'ignorer les NaN
         st.markdown(f"<div style='background-color:#e9f7ff; padding:10px; border-radius:10px; text-align:center;'><b>Nombre de mots-clés uniques</b><br><span style='font-size:20px; color:#5bc0de;'>{unique_keywords_count}</span></div>", unsafe_allow_html=True)
         
-        # 🔍 Affichage du DataFrame principal
-        st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
-        st.dataframe(df)
+    # 🔍 Affichage du DataFrame principal
+    st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
+    st.dataframe(df)
 
 # ============================
 # 2️⃣ Page : Analyse des auteurs
