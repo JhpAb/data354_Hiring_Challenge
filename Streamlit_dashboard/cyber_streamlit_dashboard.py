@@ -86,6 +86,7 @@ elif page == "🏆 Analyse des auteurs":
     st.write("N.B : Les donées de 'Likes' 'Shares' on été générées de manière arbitraires vu que nous ne pouvions les colleceter.")
     
     # 📊 Likes et Shares des Top 10 Auteurs (2 colonnes côte à côte)
+    st.write("N.B : Les donées de 'Likes' 'Shares' on été générées de manière arbitraires vu que nous ne pouvions les colleceter.")
     st.subheader("Likes et Shares des Top 10 Auteurs")
     col1, col2 = st.columns(2)
 
