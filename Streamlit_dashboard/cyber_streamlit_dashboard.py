@@ -83,6 +83,8 @@ elif page == "🏆 Analyse des auteurs":
     plt.title("Top 10 des auteurs et/ou sources avec le plus de publications")
     st.pyplot(fig)
 
+    st.write("N.B : Les donées de 'Likes' 'Shares' on été générées de manière arbitraires vu que nous ne pouvions les colleceter.")
+    
     # 📊 Likes et Shares des Top 10 Auteurs (2 colonnes côte à côte)
     st.subheader("Likes et Shares des Top 10 Auteurs")
     col1, col2 = st.columns(2)
@@ -120,12 +122,6 @@ elif page == "🏆 Analyse des auteurs":
     st.pyplot(fig)
     correlation = top_10_authors_df_sorted['Likes'].corr(top_10_authors_df_sorted['Shares'])
     st.write(f"Coefficient de corrélation : **{correlation:.2f}**")
-
-    
-    
-    
-    st.write("N.B : Les donées de 'Likes' 'Shares' on été générées de manière arbitraires vu que nous ne pouvions les colleceter.")
-
 
 # ============================
 # 3️⃣ Page : Analyse des mots-clés
