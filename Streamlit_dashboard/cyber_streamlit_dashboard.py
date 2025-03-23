@@ -110,7 +110,7 @@ elif page == "🏆 Analyse des auteurs":
         plt.title("Shares des Top 10 Auteurs")
         st.pyplot(fig)
         # 📝 Explication sous le graphique
-        st.write("Ce graphique illustre le nombre de 'Shares' (partages) des publications des Top 10 Auteurs." 
+        st.write("Ce graphique illustre le nombre de 'Shares' (partages) des publications du Top 10 Auteurs." 
         " Cela permet d'évaluer la viralité des publications et de voir comment elles sont partagées au sein du réseau LinkedIn.")
 
     # 🔗 Corrélation entre Likes et Shares
@@ -159,8 +159,8 @@ elif page == "🔍 Analyse des mots-clés":
     plt.title("Nuage de mots des mots-clés")
     st.pyplot(fig)
     # 📝 Explication sous le graphique
-    st.write("Ce graphique montre la distribution des publications par auteur en fonction des mots-clés." 
-    " Il permet d'observer quelles sont les thématiques les plus abordées par les auteurs en fonction de leur domaine d'activité.")
+    st.write("Ce graphique montre la distribution des publications du Top 10 des auteurs en fonction des mots-clés." 
+    " Il permet d'observer quelles sont les thématiques les plus abordées par ces auteurs en fonction de leur domaine d'activité.")
 
 # ================================
 # 4️⃣ Page : Analyse du contenu texte
@@ -181,7 +181,7 @@ elif page == "📋 Analyse du contenu de publications":
     plt.title("Nuage de mots du contenu des publications")
     st.pyplot(fig)
     # 📝 Explication sous le graphique
-    st.write("Le WordCloud ci-dessus présente visuellement les mots les plus fréquemment utilisés dans le contenu des publications des Top 10 Auteurs. "
+    st.write("Le WordCloud ci-dessus présente visuellement les mots les plus fréquemment utilisés dans le contenu des publications du Top des 10 Auteurs. "
     " Plus un mot est grand, plus il apparaît fréquemment dans les textes. ")
 
 # ========================
