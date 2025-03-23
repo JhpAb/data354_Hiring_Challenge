@@ -139,8 +139,7 @@ elif page == "🏆 Analyse des auteurs":
     st.pyplot(fig)
     
     # 📊 Likes et Shares des Top 10 Auteurs (2 colonnes côte à côte)
-    
-    st.write("N.B : Les donées de 'Likes' & de 'Shares' on été générées de manière arbitraire vu que nous ne pouvions les colleceter.")
+    st.markdown("**N.B :** Les données de 'Likes' et de 'Shares' ont été générées de manière arbitraire, car nous ne pouvions pas les collecter.")
     
     st.subheader("Likes et Shares des Top 10 Auteurs")
     col1, col2 = st.columns(2)
