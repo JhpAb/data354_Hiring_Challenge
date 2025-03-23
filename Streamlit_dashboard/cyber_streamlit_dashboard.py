@@ -67,11 +67,6 @@ if page == "📈 Statistiques générales":
 
     with col6:
         st.markdown(f"<div style='background-color:#e0f7fa; padding:10px; border-radius:10px; text-align:center;'><b>Total des Shares</b><br><span style='font-size:20px; color:#00bcd4;'>{total_shares}</span></div>", unsafe_allow_html=True)
-
-        # Affichage du nombre total de Likes et Shares du Top 10 des auteurs
-        st.markdown(f"<div style='background-color:#f9f8f8; padding:10px; border-radius:10px; text-align:center;'><b>Likes Totals des Top 10 Auteurs</b><br><span style='font-size:20px; color:#ff6347;'>{top_10_likes}</span></div>", unsafe_allow_html=True)
-        st.markdown(f"<div style='background-color:#f9f8f8; padding:10px; border-radius:10px; text-align:center;'><b>Shares Totals des Top 10 Auteurs</b><br><span style='font-size:20px; color:#ff6347;'>{top_10_shares}</span></div>", unsafe_allow_html=True)
-
 # ============================
 # 2️⃣ Page : Analyse des auteurs
 # ============================
