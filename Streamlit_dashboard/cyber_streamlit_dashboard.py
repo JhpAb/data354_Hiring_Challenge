@@ -27,7 +27,7 @@ st.title("📊 LinkedIn Post Analysis Dashboard")
 
 # Sidebar de navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Aller à", ["📈 Statistiques générales", "🏆 Analyse des auteurs", "🔍 Analyse des mots-clés"])
+page = st.sidebar.radio("Aller à", ["📈 Statistiques générales", "🏆 Analyse des auteurs", "🔍 Analyse des mots-clés", "📋 Analyse du contenu de publications"])
 
 if page == "📈 Statistiques générales":
     st.header("📊 Statistiques générales")
