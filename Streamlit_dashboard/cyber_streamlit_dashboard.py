@@ -75,6 +75,11 @@ if page == "📈 Statistiques générales":
     plt.title("Les 30 auteurs et/ou sources par avec le plus de publications")
     st.pyplot(fig)
 
+    # 📝 Explication sous le graphique
+    st.write("Ce graphique présente les 30 auteurs ou sources ayant publié le plus grand nombre de publications dans la base de données. 
+    Vous pouvez observer la répartition des publications par auteur et identifier ceux qui sont les plus actifs.")
+
+
 # ============================
 # 2️⃣ Page : Analyse des auteurs
 # ============================
@@ -106,6 +111,10 @@ elif page == "🏆 Analyse des auteurs":
         plt.ylabel("Auteurs")
         plt.title("Likes des Top 10 Auteurs")
         st.pyplot(fig)
+        # 📝 Explication sous le graphique
+        st.write("Ce graphique montre le nombre de 'Likes' accumulés par chaque auteur parmi les 10 auteurs les plus actifs. 
+        Il permet de comparer l'engagement des utilisateurs vis-à-vis des publications de chaque auteur.")
+
 
     with col2:
         fig, ax = plt.subplots(figsize=(12, 6))
@@ -114,6 +123,9 @@ elif page == "🏆 Analyse des auteurs":
         plt.ylabel("Auteurs")
         plt.title("Shares des Top 10 Auteurs")
         st.pyplot(fig)
+        # 📝 Explication sous le graphique
+        st.write("Ce graphique illustre le nombre de 'Shares' (partages) des publications des Top 10 Auteurs. 
+        Cela permet d'évaluer la viralité des publications et de voir comment elles sont partagées au sein du réseau LinkedIn.")
 
     # 🔗 Corrélation entre Likes et Shares
     st.subheader("📊 Corrélation entre Likes et Shares")
@@ -160,6 +172,9 @@ elif page == "🔍 Analyse des mots-clés":
     ax.axis("off")
     plt.title("Nuage de mots des mots-clés")
     st.pyplot(fig)
+    # 📝 Explication sous le graphique
+    st.write("Ce graphique montre la distribution des publications par auteur en fonction des mots-clés. 
+    Il permet d'observer quelles sont les thématiques les plus abordées par les auteurs en fonction de leur domaine d'activité.")
 
 # ================================
 # 4️⃣ Page : Analyse du contenu texte
@@ -179,6 +194,9 @@ elif page == "📋 Analyse du contenu de publications":
     ax.axis("off")
     plt.title("Nuage de mots du contenu des publications")
     st.pyplot(fig)
+    # 📝 Explication sous le graphique
+    st.write("Le WordCloud ci-dessus présente visuellement les mots les plus fréquemment utilisés dans le contenu des publications des Top 10 Auteurs. 
+    Plus un mot est grand, plus il apparaît fréquemment dans les textes.")
 
 # ========================
 # 👤 Pied de page - Auteurs
