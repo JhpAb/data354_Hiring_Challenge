@@ -59,7 +59,7 @@ if page == "📈 Statistiques générales":
     with col4:
         # Nombre de mots-clés uniques
         unique_keywords_count = df['Keywords'].nunique()
-        st.metric(label="Nombre de mots-clés uniques", value=unique_keywords_count)
+        st.metric(label="Mots-clés uniques", value=unique_keywords_count)
 
     # 🔍 Affichage du DataFrame principal
     st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
