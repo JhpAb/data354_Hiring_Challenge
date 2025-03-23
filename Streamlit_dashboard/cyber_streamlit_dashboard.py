@@ -52,11 +52,6 @@ if page == "📈 Statistiques générales":
         st.metric(label="Nombre d'auteurs uniques", value=df['Author'].nunique())
 
     with col3:
-        # Top 10 des auteurs
-        top_10_authors_count = df['Author'].value_counts().head(10).count()
-        st.metric(label="Top 10 des auteurs", value=top_10_authors_count)
-
-    with col4:
         # Nombre de mots-clés uniques
         unique_keywords_count = df['Keywords'].nunique()
         st.metric(label="Mots-clés uniques", value=unique_keywords_count)
