@@ -77,7 +77,7 @@ if page == "📈 Statistiques générales":
 
     # 📝 Explication sous le graphique
     st.write("Ce graphique présente les 30 auteurs ou sources ayant publié le plus grand nombre de publications dans la base de données." 
-    "Vous pouvez observer la répartition des publications par auteur et identifier ceux qui sont les plus actifs.")
+    " Vous pouvez observer la répartition des publications par auteur et identifier ceux qui sont les plus actifs.")
 
 
 # ============================
@@ -113,7 +113,7 @@ elif page == "🏆 Analyse des auteurs":
         st.pyplot(fig)
         # 📝 Explication sous le graphique
         st.write("Ce graphique montre le nombre de 'Likes' accumulés par chaque auteur parmi les 10 auteurs les plus actifs." 
-        "Il permet de comparer l'engagement des utilisateurs vis-à-vis des publications de chaque auteur.")
+        " Il permet de comparer l'engagement des utilisateurs vis-à-vis des publications de chaque auteur.")
 
 
     with col2:
@@ -174,7 +174,7 @@ elif page == "🔍 Analyse des mots-clés":
     st.pyplot(fig)
     # 📝 Explication sous le graphique
     st.write("Ce graphique montre la distribution des publications par auteur en fonction des mots-clés." 
-    "Il permet d'observer quelles sont les thématiques les plus abordées par les auteurs en fonction de leur domaine d'activité.")
+    " Il permet d'observer quelles sont les thématiques les plus abordées par les auteurs en fonction de leur domaine d'activité.")
 
 # ================================
 # 4️⃣ Page : Analyse du contenu texte
@@ -196,7 +196,7 @@ elif page == "📋 Analyse du contenu de publications":
     st.pyplot(fig)
     # 📝 Explication sous le graphique
     st.write("Le WordCloud ci-dessus présente visuellement les mots les plus fréquemment utilisés dans le contenu des publications des Top 10 Auteurs. "
-    "Plus un mot est grand, plus il apparaît fréquemment dans les textes.")
+    " Plus un mot est grand, plus il apparaît fréquemment dans les textes. ")
 
 # ========================
 # 👤 Pied de page - Auteurs
