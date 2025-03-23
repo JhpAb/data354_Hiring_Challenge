@@ -95,7 +95,7 @@ elif page == "🏆 Analyse des auteurs":
         sns.barplot(x='Likes', y='Author', data=top_10_authors_df_sorted, palette='viridis', ax=ax)
         plt.xlabel("Likes")
         plt.ylabel("Auteurs")
-        plt.title("Likes des Top 10 Auteurs")
+        plt.title("Likes du Top 10 Auteurs")
         st.pyplot(fig)
         # 📝 Explication sous le graphique
         st.write("Ce graphique montre le nombre de 'Likes' accumulés par chaque auteur parmi les 10 auteurs les plus actifs." 
@@ -107,7 +107,7 @@ elif page == "🏆 Analyse des auteurs":
         sns.barplot(x='Shares', y='Author', data=top_10_authors_df_sorted, palette='magma', ax=ax)
         plt.xlabel("Shares")
         plt.ylabel("Auteurs")
-        plt.title("Shares des Top 10 Auteurs")
+        plt.title("Shares du Top 10 Auteurs")
         st.pyplot(fig)
         # 📝 Explication sous le graphique
         st.write("Ce graphique illustre le nombre de 'Shares' (partages) des publications du Top 10 Auteurs." 
