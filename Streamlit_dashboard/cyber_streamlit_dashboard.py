@@ -41,6 +41,9 @@ page = st.sidebar.radio("Aller à", [
 # ================================
 if page == "📈 Statistiques générales":
     st.header("📊 Statistiques générales")
+    # 🔍 Affichage du DataFrame principal
+    st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
+    st.dataframe(df)
 
     # 🧮 Affichage des métriques clés dans des cases colorées
     col1, col2, col3, col4 = st.columns(4)
@@ -59,26 +62,15 @@ if page == "📈 Statistiques générales":
         unique_keywords_count = df['Keywords'].dropna().nunique()  # Assurez-vous d'ignorer les NaN
         st.markdown(f"<div style='background-color:#e9f7ff; padding:10px; border-radius:10px; text-align:center;'><b>Nombre de mots-clés uniques</b><br><span style='font-size:20px; color:#5bc0de;'>{unique_keywords_count}</span></div>", unsafe_allow_html=True)
 
+    with col5:
+        st.markdown(f"<div style='background-color:#f1e0ff; padding:10px; border-radius:10px; text-align:center;'><b>Total des Likes</b><br><span style='font-size:20px; color:#9b59b6;'>{total_likes}</span></div>", unsafe_allow_html=True)
 
-    # 🔍 Affichage du DataFrame principal
-    st.subheader("Tableau des données : LinkedIn_Post_Analysis.csv")
-    st.dataframe(df)
+    with col6:
+        st.markdown(f"<div style='background-color:#e0f7fa; padding:10px; border-radius:10px; text-align:center;'><b>Total des Shares</b><br><span style='font-size:20px; color:#00bcd4;'>{total_shares}</span></div>", unsafe_allow_html=True)
 
-    # 📊 Les 30 auteurs et/ou sources avec le plus de publications
-    st.subheader("Nombre de publications par auteur")
-    author_counts = df['Author'].value_counts().head(30)
-    fig, ax = plt.subplots(figsize=(12, 6))
-    sns.barplot(x=author_counts.index, y=author_counts.values, palette="coolwarm", ax=ax)
-    plt.xticks(rotation=90)
-    plt.xlabel("Auteurs")
-    plt.ylabel("Nombre de publications")
-    plt.title("Les 30 auteurs et/ou sources par avec le plus de publications")
-    st.pyplot(fig)
-
-    # 📝 Explication sous le graphique
-    st.write("Ce graphique présente les 30 auteurs ou sources ayant publié le plus grand nombre de publications dans la base de données." 
-    " Vous pouvez observer la répartition des publications par auteur et identifier ceux qui sont les plus actifs.")
-
+        # Affichage du nombre total de Likes et Shares du Top 10 des auteurs
+        st.markdown(f"<div style='background-color:#f9f8f8; padding:10px; border-radius:10px; text-align:center;'><b>Likes Totals des Top 10 Auteurs</b><br><span style='font-size:20px; color:#ff6347;'>{top_10_likes}</span></div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='background-color:#f9f8f8; padding:10px; border-radius:10px; text-align:center;'><b>Shares Totals des Top 10 Auteurs</b><br><span style='font-size:20px; color:#ff6347;'>{top_10_shares}</span></div>", unsafe_allow_html=True)
 
 # ============================
 # 2️⃣ Page : Analyse des auteurs
