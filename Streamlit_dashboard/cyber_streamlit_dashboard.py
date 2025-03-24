@@ -140,7 +140,7 @@ elif page == "🏆 Analyse des auteurs":
     
     # 📊 Likes et Shares des Top 10 Auteurs
     
-    st.subheader("Likes et Shares des Top 10 Auteurs")
+    st.subheader("Likes et Shares du Top 10 Auteurs")
     col1, col2 = st.columns(2)
 
     with col1:
