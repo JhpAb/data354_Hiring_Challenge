@@ -1,6 +1,6 @@
 # data354_Hiring_Challenge
 
-LinkedIn Post Analysis Dashboard
+LinkedIn Post Analysis
 
 Description
 
