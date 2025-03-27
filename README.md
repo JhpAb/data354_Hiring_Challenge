@@ -56,8 +56,9 @@ Le projet utilise deux fichiers CSV qui contiennent les données des publication
 
 
 Les données de ces fichiers sont chargées depuis des URL publiques.
---
+
 Fonctionnalités
+--
 
 1. 📈 Statistiques générales
 
