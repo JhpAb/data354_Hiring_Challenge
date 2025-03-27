@@ -1,8 +1,10 @@
 # data354_Hiring_Challenge
 
 LinkedIn Post Analysis
+--
 
 Description
+--
 
 Ce projet crée un tableau de bord interactif pour l'analyse des publications LinkedIn en utilisant des données sur les auteurs, les likes, les partages, et les mots-clés. Le tableau de bord est développé avec Streamlit, une bibliothèque Python permettant de créer des applications web interactives. Ce tableau de bord permet de :
 
@@ -34,8 +36,9 @@ Matplotlib et Seaborn : Pour la visualisation des données sous forme de graphiq
 
 WordCloud : Pour générer des nuages de mots à partir des mots-clés et du contenu des publications.
 
-
+--
 Prérequis
+--
 
 Avant d'exécuter ce projet, vous devez avoir installé les bibliothèques suivantes :
 
@@ -51,9 +54,9 @@ Le projet utilise deux fichiers CSV qui contiennent les données des publication
 2. top_10_authors_df_sorted.csv : Ce fichier contient des informations supplémentaires sur les 10 auteurs ayant le plus de publications, y compris les likes, les partages, les mots-clés et le contenu des publications.
 
 
-
+--
 Les données de ces fichiers sont chargées depuis des URL publiques.
-
+--
 Fonctionnalités
 
 1. 📈 Statistiques générales
@@ -82,9 +85,9 @@ Nuage de mots des mots-clés les plus utilisés dans les publications des top 10
 
 Nuage de mots des contenus des publications des top 10 auteurs.
 
-
+--
 Utilisation
-
+--
 1. Clonez ce dépôt ou téléchargez les fichiers sources sur votre machine.
 
 
@@ -119,6 +122,7 @@ Nuages de mots représentant les mots-clés et le contenu des publications.
 Ces visualisations permettent une analyse approfondie de la performance des publications sur LinkedIn.
 
 Contact
+--
 
 Auteur : ABBE Jean Pierre, Data Analyst | CEM Engineer
 
@@ -126,7 +130,8 @@ Téléphone : +225 0749499034
 
 Email : abbejeanpierre0808@gmail.com
 
-
+--
 Contributions
+--
 
 Les contributions sont les bienvenues ! Si vous avez des idées pour améliorer ce projet, n'hésitez pas à ouvrir une issue ou à soumettre une pull request.
