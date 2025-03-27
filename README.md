@@ -36,7 +36,7 @@ Matplotlib et Seaborn : Pour la visualisation des données sous forme de graphiq
 
 WordCloud : Pour générer des nuages de mots à partir des mots-clés et du contenu des publications.
 
---
+
 Prérequis
 --
 
@@ -54,7 +54,7 @@ Le projet utilise deux fichiers CSV qui contiennent les données des publication
 2. top_10_authors_df_sorted.csv : Ce fichier contient des informations supplémentaires sur les 10 auteurs ayant le plus de publications, y compris les likes, les partages, les mots-clés et le contenu des publications.
 
 
---
+
 Les données de ces fichiers sont chargées depuis des URL publiques.
 --
 Fonctionnalités
@@ -85,7 +85,7 @@ Nuage de mots des mots-clés les plus utilisés dans les publications des top 10
 
 Nuage de mots des contenus des publications des top 10 auteurs.
 
---
+
 Utilisation
 --
 1. Clonez ce dépôt ou téléchargez les fichiers sources sur votre machine.
@@ -130,7 +130,7 @@ Téléphone : +225 0749499034
 
 Email : abbejeanpierre0808@gmail.com
 
---
+
 Contributions
 --
 
